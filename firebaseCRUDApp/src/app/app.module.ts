@@ -13,13 +13,15 @@ import { HomeComponent } from './components/home/home.component';
 import { BookComponent } from './components/book/book.component';
 import { BooksComponent } from './components/books/books.component';
 import { SearchComponent } from './components/search/search.component';
+import { EditBookComponent } from './modal/edit-book/edit-book.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BookComponent,
     BooksComponent,
-    SearchComponent
+    SearchComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
