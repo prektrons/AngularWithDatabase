@@ -101,6 +101,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "firebaseCRUDApp:build:production",
+            "firebaseProject": "book-29227",
+            "firebaseHostingSite": "book-29227"
+          }
         }
       }
     }

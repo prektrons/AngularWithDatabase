@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "book-29227": {
+      "hosting": {
+        "firebaseCRUDApp": [
+          "book-29227"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "book-29227"
+  }
+}
