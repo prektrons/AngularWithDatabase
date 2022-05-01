@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { IBook } from 'src/app/book.model';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
+  book: IBook = { name: '', author: '', genre: '', price: 0 };
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  onSubmit(form: NgForm) {
+    this.bookService.addBook(form.value).
+      then(() => form.reset());
   }
 
 }
